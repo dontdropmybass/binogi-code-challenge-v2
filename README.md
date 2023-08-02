@@ -23,14 +23,17 @@ The assignment is to add a column named `nickname` (via a migration) to the data
 
 1. The GET request needs to include the new column.
 2. The POST request and the PUT request need to be able to change the value of the column asserting the following validation rules:
-   - A valid nickname must be unique among users.
-   - A valid nickname must be shorter than 30 characters.
+   - A valid `nickname` must be <ins> unique </ins> among users.
+   - A valid `nickname` must be <ins> shorter </ins> than 30 characters.
 3. Documentation should be updated so Swagger can be generated and used to smoke test.
    - We are using the open-source package [L5-Swagger](https://github.com/DarkaOnLine/L5-Swagger) to generate OpenAPI Swagger.
 4. Tests
    - Integration and Acceptance tests should be updated to reflect your changes
    - Tests should be added to assert that your changes function as expected
    - Tests should be added to assert that given "bad" cases will fail (assert failures)
+#### Additional Instructions
+- Please carefully review the existing codebase and find/fix(handle) any errors that you come across. For instance, make sure to handle 404 errors for all requests appropriately. Thoroughly test your fixes to ensure that the application behaves as expected under various scenarios.
+- Feel free to add relevant comments and documentation in the code to explain any changes you make or any assumptions you may have made during the process.
 
 ### Submitting Your Work
 1. When you are ready to submit your work: do not open a PR. 
