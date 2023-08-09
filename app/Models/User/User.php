@@ -16,6 +16,7 @@ use Illuminate\Support\Carbon;
  * @property string                               $email
  * @property string                               $password
  * @property string                               $name
+ * @property string                               $nickname
  * @property Carbon                               $created_at
  * @property Carbon                               $updated_at
  */
@@ -31,6 +32,7 @@ class User extends Model
     protected $fillable = [
         'name',
         'email',
+        'nickname',
         'password',
     ];
 

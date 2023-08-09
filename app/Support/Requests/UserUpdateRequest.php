@@ -33,6 +33,14 @@ use Illuminate\Validation\Rule;
  *      description="User Password",
  *      example="correct horse battery staple",
  *   ),
+ *   @OA\Property(
+ *      property="nickname",
+ *      type="string",
+ *      example="janedoe",
+ *      description="User nickname",
+ *      minLength=1,
+ *      maxLength=30,
+ *   ),
  * )
  *
  * Get the validation rules that apply to the request.
@@ -56,6 +64,7 @@ class UserUpdateRequest extends FormRequest
                 'email',
                 Rule::unique('users')->ignore(request()->route('user')->id),
             ],
+            'nickname' => 'string|min:1|max:30|unique:users',
         ];
     }
 }
